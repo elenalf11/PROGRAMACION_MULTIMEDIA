@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Puntuable Tailwind</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="bg-gradient-to-br from-blue-950 to-blue-600 min-h-screen">
+    <div class="mx-auto px-[10px] py-[20px] h-full">
+
+        <!-- HEADER -->
+        <header class="mx-[10px] py-[20px]">
+            <h1 class="flex justify-center font-bold text-3xl text-blue-300">Elena</h1>
+            <p class="flex justify-center text-blue-400">Desarrolladora Aplicaciones Multiplataforma</p>
+        </header>
+
+        <!--NAVBAR-->
+        <nav class="justify-items-center grid grid-cols-2 sm:grid-cols-4 mx-[10px] mt-4 text-blue-300">
+            <ul> <a class="hover:text-blue-200">Sobre mí</a> </ul>
+            <ul> <a class="hover:text-blue-200">Proyectos</a> </ul>
+            <ul> <a class="hover:text-blue-200">Habilidades</a> </ul>
+            <ul> <a class="hover:text-blue-200">Contacto</a> </ul>
+        </nav>
+
+        <!--CONTENT-->
+        <div class="gap-4 grid grid-cols-1 sm:grid-cols-2 mx-[10px] my-[10px] mt-4 w-full">
+
+            <!--SOBRE MI-->
+            <div class="bg-blue-950 mx-[10px] px-[10px] py-[10px] border border-blue-400 rounded-lg w-auto h-auto">
+                <h1 class="px-[10px] py-[10px] font-semibold text-blue-300 text-xl">Sobre mí</h1>
+                <p class="text-sm text-white">Soy estudiante de 2º CFGS Desarrollo de Aplicaciones Multiplataforma. Mi objetivo es mejorar mi conocimiento en programación y desarrollo web. También quiero mejorar mi habilidad en el uso de herramientas de desarrollo.</p>
+            </div>
+
+            <!--PROYECTOS-->
+            <div class="mx-[10px] mt-[10px]">
+                <h1 class="px-[10px] py-[10px] font-bold text-blue-300 text-xl">Proyectos destacados</h1>
+
+                <!--SIMÓN DICE-->
+                <div class="bg-blue-950 my-[10px] px-[10px] py-[10px] border border-blue-400 rounded-lg w-auto h-auto transform hover:scale-105">
+                    <h2 class="font-bold text-blue-400 text-md">Simón Dice</h2>
+                    <p class="py-[10px] text-sm text-white">Es un juego de memorizar colores. Tiene dos dificultades: fácil y difícil. Es un proyecto realizado en Java</p>
+                </div>
+
+                <!--MÁQUINA VIRTUAL-->
+                <div class="bg-blue-950 px-[10px] py-[10px] border border-blue-400 rounded-lg w-auto h-auto transform hover:scale-105">
+                    <h2 class="font-bold text-blue-400 text-md">Máquina Virtual</h2>
+                    <p class="text-sm text-white">Es un proyecto en el que simula una máquina virtual, puedes ejecutar diferentes comandos y ver el resultado. Es un proyecto realizado en Java</p>
+                </div>
+
+            </div>
+
+            <!--HABILIDADES-->
+            <div class="bg-blue-950 mx-[10px] mt-[10px] px-[10px] border border-blue-400 rounded-lg">
+                <h1 class="py-[10px] font-semibold text-blue-300 text-xl">Habilidades</h1>
+
+                <!--BOTONES-->
+                <div class="gap-3 grid grid-cols-2 my-[10px] w-auto h-auto">
+                    <button class="bg-blue-900 hover:bg-blue-800 my-[10px] border border-transparent rounded-full w-auto text-white">Java</button>
+                    <button class="bg-blue-900 hover:bg-blue-800 my-[10px] border border-transparent rounded-full text-white">Python</button>
+                    <button class="bg-blue-900 hover:bg-blue-800 my-[10px] border border-transparent rounded-full text-white">SQL</button>
+                    <button class="bg-blue-900 hover:bg-blue-800 my-[10px] border border-transparent rounded-full text-white">MongoDB</button>
+                    <button class="bg-blue-900 hover:bg-blue-800 my-[10px] border border-transparent rounded-full text-white">JavaScript</button>
+                    <button class="bg-blue-900 hover:bg-blue-800 my-[10px] border border-transparent rounded-full text-white">Tailwind</button>
+                </div>
+
+            </div>
+            
+            <!--CONTACTO-->
+            <div class="bg-blue-950 mx-[10px] mt-[10px] border border-blue-400 rounded-lg w-auto h-auto">
+                <h1 class="px-[10px] py-[10px] font-semibold text-blue-300 text-xl">Contacto</h1>
+                <p class="px-[10px] py-[10px] text-sm text-white">¿Interesado en trabajar juntos? ¡Contáctame!</p>
+                <button class="bg-blue-700 hover:bg-blue-500 mx-[10px] my-[10px] border border-transparent rounded-full w-[100px] text-white">Send Email</button>
+            </div>
+        </div>
+
+        <!--FOOTER-->
+        <footer class="flex justify-center mx-[10px] my-[10px] text-blue-400">
+            <p>Copyright © 2023 Elena López Félix</p>
+        </footer>
+
+    </div>
+</body>
+</html>
