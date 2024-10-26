@@ -1,11 +1,35 @@
-<header class="bg-gray-900 mx-auto px-4 lg:px-6 py-8 lg:py-16 max-w-xl">
+---
+import HeaderButton from "./HeaderButton.astro";
+---
+
+<header class="mx-auto px-4 lg:px-6 py-8 lg:py-16 max-w-xl">
     <div class="mx-auto mb-8 lg:mb-16 text-center">
-        <h2 class="mb-4 font-extrabold text-5xl text-white tracking-tight">SpaceX Launches</h2>
-        <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">All the information abour SpaceX launches</p>
+      <h2 class="mb-4 font-extrabold text-5xl text-white tracking-tight">
+        SpaceX launches 🚀
+      </h2>
+      <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">
+        All the information about SpaceX launches
+      </p>
     </div>
 
     <nav class="flex md:flex-row flex-col justify-between items-center w-full text-center">
-        <a class="text-white" href="/">Últimos lanzamientos</a>
-        <a class="text-white" href="/oldest">Los más viejos</a>
+        <HeaderButton class="text-white" href="/">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6" slot="after">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z" />
+            </svg>              
+            Últimos lanzamientos
+        </HeaderButton>
+      <HeaderButton class="text-white" href="/oldest">Los más viejos</HeaderButton>
+      <HeaderButton class="text-white" href="/about">Sobre el proyecto</HeaderButton>
     </nav>
-</header>
+
+  </header>
+
+  <style>
+    /* Si necesitas estilos específicos puedes añadirlos aquí */
+  </style>
+
+  <script>
+    // Para el console.log que aparece en la imagen
+    console.log("javascript")
+  </script>
