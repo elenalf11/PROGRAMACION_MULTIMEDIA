@@ -1,0 +1,30 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+const personajes = await getCollection('personajes');
+
+const {slug, data} = Astro.params;
+const { nombre, hp, nivel, habilidad, fuerza, img, descripcion, valor } = data;
+
+---
+
+<Layout title={nombre}>
+	<a href="/"> <h1 class="font-bold text-3xl text-center dark:text-white">¿Quieres volver a la colección?</h1> </a>
+	<div id="personaje" class="py-5 pr-5">
+        <aside>
+            <img src={img} alt={nombre} class="size-32" />
+        </aside>
+			
+			<div id="info" class="">
+				<h3 class="font-bold text-xl md:2xl dark:text-white">{nombre}</h3>
+				<p class="dark:text-white">HP: {hp}</p>
+				<p class="dark:text-white">Nivel: {nivel}</p>
+				<p class="dark:text-white">Habilidad: {habilidad}</p>
+				<p class="dark:text-white">Fuerza: {fuerza}</p>
+				<p class="dark:text-white">Valor: {valor}</p>
+				<p class="dark:text-white">{descripcion}</p>
+			</div>
+		</a>
+    </div>
+</Layout>

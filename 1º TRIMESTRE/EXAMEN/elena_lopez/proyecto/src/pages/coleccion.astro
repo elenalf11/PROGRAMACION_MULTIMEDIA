@@ -1,0 +1,39 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import Mensaje from '../components/Mensaje.astro';
+
+
+const personajes = await getCollection('personajes');
+---
+<Layout title="Coleccion de Digimons">
+    <a href="/"> <Mensaje /> </a>
+
+    {
+        personajes.map((personaje: any) => {
+            const {slug, data} = personaje;
+            const { nombre, hp, nivel, habilidad, fuerza, img, descripcion, valor } = data;
+            return (
+            <div id="personajes" class="flex flex-col justify-center items-center md:gap-5 md:grid md:grid-cols-3 px-5 py-5">
+                <a href={`personaje/${slug}`}>
+                <img src={img} alt={nombre} class="hover:blur-sm transform scale-105 size-8 hover:" transition:name={`personaje-${img}`}/>
+                <div id="personajes-info" class="px-5 py-5">
+                    <h3>{nombre}</h3>
+                    <p>HP: {hp}</p>
+                    <p>Nivel: {nivel}</p>
+                    <p>Habilidad: {habilidad}</p>
+                    <p>Fuerza: {fuerza}</p>
+                    <p>Valor: {valor}</p>
+                    <p>{descripcion}</p>
+                </div>
+                </a>
+
+            </div>
+        )
+        }
+    )}
+</Layout>
+    
+        
+                
+        

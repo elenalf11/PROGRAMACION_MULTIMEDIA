@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Boton from '../components/Boton.astro';
+import Mensaje2 from '../components/Mensaje2.astro';
+---
+
+<Layout title="Mi Página web sobre Digimons">
+	<main>
+		<Mensaje2 />
+
+		
+		<div class="flex flex-col justify-center items-center gap-5 md:gap-5 border-yellow-400 mx-5 my-5 p-5 border rounded-lg">
+			<h2 class="justify-center mx-5 my-5 text-2xl text-center dark:text-white">Mis páginas favoritas sobre Digimons</h2>
+			<div class="flex flex-col justify-center items-center gap-5 md:grid md:grid-cols-2">
+				<Boton>TodoSobreDigimons</Boton>
+				<Boton>DigimonsPorNivel</Boton>
+				<Boton>DigimonsPorHabilidad</Boton>
+				<Boton>DigimonsPorFuerza</Boton>
+			</div>
+			
+		</div>
+
+		<div class="flex flex-col justify-center items-center gap-5 md:gap-5 border-yellow-400 mx-5 my-5 p-5 border rounded-lg">
+			<h2 class="justify-center mx-5 my-5 text-2xl text-center dark:text-white">¿Quieres ver mis digimons?</h2>
+			<a href="/coleccion" class="bg-emerald-600 hover:bg-emerald-500 dark:hover:bg-yellow-500 dark:bg-indigo-400 px-4 py-2 rounded font-bold dark:text-white" >Mi Colección de Digimons</a>
+		</div>
+	</main>
+</Layout>
